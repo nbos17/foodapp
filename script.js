@@ -4,13 +4,13 @@ $('.food').on('click', function() {
 	$('#first').css('display', 'none');
 });
 
-//Choose Quality
+//Choose Cheap Second Card
 $('#Cheap').on('click', function() {
 	$('#second').css('display', 'none');
 	$('#third').css('display', 'block');
 });
 
-//Choose Time
+//Choose Healthy Second Card
 $('#Healthy').on('click', function() {
 	$('#second').css('display', 'none');
 	$('#third').css('display', 'block');

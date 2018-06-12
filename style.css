@@ -43,3 +43,12 @@
 	margin-top: 60px;
 	background-color: red;
 }
+
+@media screen and (max-width: 370px) {
+	.food {
+		margin: 30px;
+	}
+	.idk {
+		margin: 30px;
+	}
+}
