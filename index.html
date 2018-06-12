@@ -36,8 +36,8 @@
 						<button class="food btn btn-primary" value="Asian">Asian</button>
 						<button class="food btn btn-primary" value="Pizza">Pizza</button>
 						<button class="food btn btn-primary" value="Italian">Italian</button>
-						<button class="food btn btn-primary" value="SeaFood">Sea Food</button>
-						<button class="food btn btn-primary" value="FastFood">American</button>
+						<button class="food btn btn-primary" value="Sea Food">Sea Food</button>
+						<button class="food btn btn-primary" value="Fast Food">American</button>
 						<button class="idk btn btn-primary" value="Question">I don't Know</button>
 					</div>
 				</div>
@@ -53,8 +53,8 @@
 				<div class="row">
 					<div class="col-md-4"></div>
 					<div class="col-md-4">
-						<button class="food btn btn-primary" id="Cheap">Cheap: $7 or Less</button>
-						<button class="food btn btn-primary" id="Healthy">I need the Quality</button>
+						<button class="q2 btn btn-primary" value="Cheap $7 or less">Cheap: $7 or Less</button>
+						<button class="q2 btn btn-primary" value="Higher Quality">I need the Quality</button>
 						<button class="btn btn-primary" id="goBack">Go Back</button>
 					</div>
 				</div>
@@ -69,14 +69,33 @@
 				<div class="row">
 					<div class="col-md-4"></div>
 					<div class="col-md-4">
-						<button class="food btn btn-primary" id="Five">5 min or Less</button>
-						<button class="food btn btn-primary" id="Time">I'm not in a Rush</button>
-						<button class="food btn btn-primary" id="Delivery">Delivery Please</button>
+						<button class="t2 btn btn-primary" value="5 min or less">5 min or Less</button>
+						<button class="t2 btn btn-primary" value="No Rush">I'm not in a Rush</button>
+						<button class="t2 btn btn-primary" value="Delivery">Delivery Please</button>
 						<button class="btn btn-primary" id="goBack2">Go Back</button>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<div class="card" id="fourth">
+			<div class="card-header">
+				<h2>Choice Summary</h2>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4">
+						<p>Food Category: <span id="foodChoice"></span></p>
+						<p>Quality: <span id="foodQuality"></span></p>
+						<p>Time: <span id="foodTime"></span></p>
+						<button class="btn btn-primary" id="Submit">See Your Options</button>
+						<button class="btn btn-primary" id="goBack3">Go Back</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 
 

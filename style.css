@@ -22,6 +22,9 @@
 #third {
 	display: none;
 }
+#fourth {
+	display: none;
+}
 #goBack {
 	margin: 10px;
 	display: block;
@@ -43,6 +46,36 @@
 	margin-top: 60px;
 	background-color: red;
 }
+#goBack3 {
+	margin: 10px;
+	display: block;
+	width: 75%;
+	margin-top: 60px;
+	background-color: red;
+}
+#Submit {
+	margin: 10px;
+	display: block;
+	width: 75%;
+	margin-top: 60px;
+	background-color: green;
+}
+.q2 {
+	margin: 10px;
+	display: block;
+	width: 75%;
+}
+.t2 {
+	margin: 10px;
+	display: block;
+	width: 75%;
+}
+span {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+
 
 @media screen and (max-width: 370px) {
 	.food {
@@ -56,5 +89,17 @@
 	}
 	#goBack2 {
 		margin: 60px 30px 30px 30px;
+	}
+	#goBack3{
+		margin: 60px 30px 30px 30px;
+	}
+	#Submit{
+		margin: 60px 30px 30px 30px;
+	}
+	.q2 {
+		margin: 30px;
+	}
+	.t2 {
+		margin: 30px;
 	}
 }
