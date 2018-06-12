@@ -2,6 +2,7 @@
 var food;
 var quality;
 var time;
+
 //Choose Food Option
 $('.food').on('click', function() {
 	food = $(this).val();
