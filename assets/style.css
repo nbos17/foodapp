@@ -75,6 +75,9 @@ span {
 	font-weight: bold;
 	font-size: 20px;
 }
+#map {
+	height: 500px;
+}
 
 
 
