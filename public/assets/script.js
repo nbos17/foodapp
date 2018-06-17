@@ -95,7 +95,7 @@ function initialize() {
   var request = {
     location: pyrmont,
     radius: '500',
-    query : 'kfc'
+    query : 'Buffalo Wild Wings'
     // type : ['kfc']
   };
 

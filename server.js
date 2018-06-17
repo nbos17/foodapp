@@ -3,6 +3,7 @@ var app = express();
 var path = require('path');
 var public = path.join(__dirname, 'public');
 var mongoose = require("mongoose");
+var db = require("./models");
 
 var PORT = process.env.PORT || 3000;
 
@@ -18,6 +19,14 @@ mongoose.connect(MONGODB_URI);
 
 app.use('/', express.static(public));
 
+
+
 app.listen(PORT, function() {
   console.log("App running on port " + PORT + "!");
 });
+
+
+
+
+
+
