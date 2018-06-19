@@ -8,18 +8,33 @@ var db = require("./models");
 const restaurants = [
   {
   	name : "Hunan Palace",
-  	quality : 3,
+  	quality : 3.5,
+    type: "Chinese",
   	time : "fast"
   },
   {
   	name : "KFC",
   	quality : 3.4,
+    type : "American"
   	time : "fast"
   },
   {
   	name : "Buffalo Wild Wings",
+    type: "American"
   	quality : 3.7,
   	time: "medium"
+  },
+  {
+    name : "Dominoes",
+    type: "pizza"
+    quality: 3.4,
+    time: "delivery"
+  },
+  {
+    name : "Papa Johns",
+    type : "pizza",
+    quality : 3.5,
+    time : "delivery"
   }
 ];
 

@@ -51,6 +51,22 @@ $('.t2').on('click', function() {
 });
 
 
+var headers = {
+  "user-key" : "b851ebe74e4a4c18d6262124a3a20db7",
+  "Accept" : "application/json"
+}
+
+var url = "https://developers.zomato.com/api/v2.1/locations?query=St.%20Paul"
+
+$.ajax(url, {
+    method : "GET",
+    headers : headers,
+    dataType : 'json'
+    }).done(function(response) {
+      console.log(response);
+
+    });
+
 // //Choice Recording-----------------------------
 // https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyDCZSnTZ6SCg14rS-zvlQPhJ9oi-gY4jec
 
@@ -60,79 +76,52 @@ $('.t2').on('click', function() {
 
 //https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=1500&type=restaurant&keyword=cruise&key=AIzaSyDCZSnTZ6SCg14rS-zvlQPhJ9oi-gY4jec
 
+
 // var map;
+// var service;
 // var infowindow;
 
-//   function initMap() {
-//     var pyrmont = {lat: 44.9516853, lng: -92.9564372};
+// function initialize() {
+//   var pyrmont = new google.maps.LatLng(44.9516853,-92.9564372);
 
-//     map = new google.maps.Map(document.getElementById('map'), {
+//   map = new google.maps.Map(document.getElementById('map'), {
 //       center: pyrmont,
 //       zoom: 15
 //     });
 
-//     infowindow = new google.maps.InfoWindow();
-//     var service = new google.maps.places.PlacesService(map);
-//     service.nearbySearch({
-//       location: pyrmont,
-//       radius: 8000,
-//       types: ['restaurant']
-//     }, callback);
+//   var request = {
+//     location: pyrmont,
+//     radius: '500',
+//     query : 'food'
+//     // type : ['kfc']
+//   };
+
+//   service = new google.maps.places.PlacesService(map);
+//   service.textSearch(request, callback);
+// }
+
+// function callback(results, status) {
+//   if (status == google.maps.places.PlacesServiceStatus.OK) {
+//     for (var i = 0; i < results.length; i++) {
+//       var place = results[i];
+//       console.log(place);
+//       createMarker(results[i]);
+//     }
+//   }
+// }
+
+
+//   function createMarker(place) {
+//     var placeLoc = place.geometry.location;
+//     var marker = new google.maps.Marker({
+//       map: map,
+//       position: place.geometry.location
+//     });
+
+//     google.maps.event.addListener(marker, 'click', function() {
+//       infowindow.setContent(place.name);
+//       infowindow.open(map, this);
+//     });
 //   }
 
-var map;
-var service;
-var infowindow;
-
-function initialize() {
-  var pyrmont = new google.maps.LatLng(44.9516853,-92.9564372);
-
-  map = new google.maps.Map(document.getElementById('map'), {
-      center: pyrmont,
-      zoom: 15
-    });
-
-  var request = {
-    location: pyrmont,
-    radius: '500',
-    query : 'Buffalo Wild Wings'
-    // type : ['kfc']
-  };
-
-  service = new google.maps.places.PlacesService(map);
-  service.textSearch(request, callback);
-}
-
-function callback(results, status) {
-  if (status == google.maps.places.PlacesServiceStatus.OK) {
-    for (var i = 0; i < results.length; i++) {
-      var place = results[i];
-      console.log(place);
-      createMarker(results[i]);
-    }
-  }
-}
-
-  // function callback(results, status) {
-  //   if (status === google.maps.places.PlacesServiceStatus.OK) {
-  //     for (var i = 0; i < results.length; i++) {
-  //     	console.log(results[i]);
-  //       createMarker(results[i]);
-  //     }
-  //   }
-  // }
-
-  function createMarker(place) {
-    var placeLoc = place.geometry.location;
-    var marker = new google.maps.Marker({
-      map: map,
-      position: place.geometry.location
-    });
-
-    google.maps.event.addListener(marker, 'click', function() {
-      infowindow.setContent(place.name);
-      infowindow.open(map, this);
-    });
-  }
-
-initialize();
+// initialize();
