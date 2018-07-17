@@ -1,3 +1,4 @@
+const db = require("../../models");
 
 //Button Options-------------------------------
 var food;
@@ -51,77 +52,23 @@ $('.t2').on('click', function() {
 });
 
 
-var headers = {
-  "user-key" : "b851ebe74e4a4c18d6262124a3a20db7",
-  "Accept" : "application/json"
-}
-
-var url = "https://developers.zomato.com/api/v2.1/locations?query=St.%20Paul"
-
-$.ajax(url, {
-    method : "GET",
-    headers : headers,
-    dataType : 'json'
-    }).done(function(response) {
-      console.log(response);
-
-    });
-
-// //Choice Recording-----------------------------
-// https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyDCZSnTZ6SCg14rS-zvlQPhJ9oi-gY4jec
-
-// https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCEQPmU9PT8Ws-pgAsdNUvsYLHtdnWyUGk
-
-// https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=mongolian%20grill&inputtype=textquery&fields=photos,formatted_address,name,opening_hours,rating&locationbias=circle:2000@47.6918452,-122.2226413&key=AIzaSyDCZSnTZ6SCg14rS-zvlQPhJ9oi-gY4jec
-
-//https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=1500&type=restaurant&keyword=cruise&key=AIzaSyDCZSnTZ6SCg14rS-zvlQPhJ9oi-gY4jec
 
 
-// var map;
-// var service;
-// var infowindow;
 
-// function initialize() {
-//   var pyrmont = new google.maps.LatLng(44.9516853,-92.9564372);
-
-//   map = new google.maps.Map(document.getElementById('map'), {
-//       center: pyrmont,
-//       zoom: 15
-//     });
-
-//   var request = {
-//     location: pyrmont,
-//     radius: '500',
-//     query : 'food'
-//     // type : ['kfc']
-//   };
-
-//   service = new google.maps.places.PlacesService(map);
-//   service.textSearch(request, callback);
+// var headers = {
+//   "user-key" : "b851ebe74e4a4c18d6262124a3a20db7",
+//   "Accept" : "application/json"
 // }
 
-// function callback(results, status) {
-//   if (status == google.maps.places.PlacesServiceStatus.OK) {
-//     for (var i = 0; i < results.length; i++) {
-//       var place = results[i];
-//       console.log(place);
-//       createMarker(results[i]);
-//     }
-//   }
-// }
+// var url = "https://developers.zomato.com/api/v2.1/search?entity_id=120403&entity_type=subzone&radius=3000&cuisines=fast%20food&sort=real_distance&order=desc"
 
 
-//   function createMarker(place) {
-//     var placeLoc = place.geometry.location;
-//     var marker = new google.maps.Marker({
-//       map: map,
-//       position: place.geometry.location
+// $.ajax(url, {
+//     method : "GET",
+//     headers : headers,
+//     dataType : 'json'
+//     }).done(function(response) {
+//       console.log(response);
+
 //     });
 
-//     google.maps.event.addListener(marker, 'click', function() {
-//       infowindow.setContent(place.name);
-//       infowindow.open(map, this);
-//     });
-//   }
-
-// initialize();
