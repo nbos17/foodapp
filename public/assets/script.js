@@ -1,4 +1,4 @@
-var db = require("../models");
+
 
 //Button Options-------------------------------
 var food;
@@ -55,7 +55,20 @@ $('.t2').on('click', function() {
 
 $('#Submit').on('click', function() {
   console.log(food, quality, time);
-})
+
+
+  $.ajax('/food', {
+    method: "GET",
+    dataType: 'json',
+    data : {
+      food : food
+    }
+  }).done(function(response) {
+    console.log(response);
+  })
+});
+
+
 
 // var headers = {
 //   "user-key" : "b851ebe74e4a4c18d6262124a3a20db7",
