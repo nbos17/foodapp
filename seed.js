@@ -15,7 +15,7 @@ const restaurants = [
   	name : "Leann Chin",
   	quality : 3.5,
     type: "Chinese",
-  	time : "medium",
+  	time : "normal",
     price : 8
   },
   {
@@ -29,7 +29,7 @@ const restaurants = [
   	name : "Buffalo Wild Wings",
     type: "Wings",
   	quality : 3.7,
-  	time: "medium",
+  	time: "normal",
     price : 10
   },
   {
@@ -50,7 +50,7 @@ const restaurants = [
     name : "Piada",
     type : "Italian",
     quality: 4.0,
-    time: "medium",
+    time: "normal",
     price: 10
   },
   {
@@ -58,13 +58,13 @@ const restaurants = [
     type : "Mexican",
     quality : 3.5,
     time : "fast",
-    price : 7 
+    price : 6 
   },
   {
     name : "Zantigo's",
     type : "Mexican",
     quality : 4.0,
-    time : "medium",
+    time : "normal",
     price : 6
   },
   {
@@ -85,14 +85,14 @@ const restaurants = [
     name : "Qdoba",
     type: "Mexican",
     quality : 4,
-    time : "medium",
+    time : "normal",
     price : 8
   },
   {
     name : "Firehouse",
     type : "sandwich",
     quality : 4,
-    time : "medium",
+    time : "normal",
     price : 8
   },
   {
@@ -113,14 +113,14 @@ const restaurants = [
     name : "D-Spot",
     type : "Wings",
     quality : 4.5,
-    time : "slow",
+    time : "normal",
     price : 12
   },
   {
     name : "Noodles and Company",
     type : "Italian",
     quality : 4,
-    time : "medium",
+    time : "normal",
     price : 8
   }
 

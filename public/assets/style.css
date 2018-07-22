@@ -26,6 +26,9 @@
 #fourth {
 	display: none;
 }
+#five {
+	display : none;
+}
 #goBack {
 	margin: 10px;
 	display: block;

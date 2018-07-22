@@ -29,10 +29,14 @@ app.get('/', function(req, res) {
 });
 
 app.get("/food", function(req, res) {
-	console.log(req.query.food);
-	var query = req.query.food;
+	var query = {type : req.query.food};
+	var number = parseInt(req.query.quality);
+	var quality = {price : number};
+	var time = {time : req.query.time};
+
+	console.log(query, quality, time);
   // Grab every document in the Articles collection
-  db.Food.find({ type : query })
+  db.Food.find({ $and: [query, quality, time ] } )
     .then(function(food) {
     	console.log(food);
       // If we were able to successfully find Articles, send them back to the client
@@ -43,7 +47,6 @@ app.get("/food", function(req, res) {
       res.json(err);
     });
 });
-
 
 
 

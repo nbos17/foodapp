@@ -5,7 +5,8 @@ const Schema = mongoose.Schema;
 const restaurantSchema = new Schema({
   name: { type: String, required: true },
   quality: { type: Number, required: true },
-  time: String,
+  type : { type : String},
+  time: { type : String}
 });
 
 const Food = mongoose.model("Food", restaurantSchema);

@@ -61,10 +61,15 @@ $('#Submit').on('click', function() {
     method: "GET",
     dataType: 'json',
     data : {
-      food : food
+      food : food,
+      quality : quality,
+      time : time
     }
   }).done(function(response) {
     console.log(response);
+    $('#fourth').css('display', 'none');
+    $('#five').css('display', 'block');
+    $('#yourChoice').html(response[0].name);
   })
 });
 
