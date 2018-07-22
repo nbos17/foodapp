@@ -72,23 +72,3 @@ $('#Submit').on('click', function() {
     $('#yourChoice').html(response[0].name);
   })
 });
-
-
-
-// var headers = {
-//   "user-key" : "b851ebe74e4a4c18d6262124a3a20db7",
-//   "Accept" : "application/json"
-// }
-
-// var url = "https://developers.zomato.com/api/v2.1/search?entity_id=120403&entity_type=subzone&radius=3000&cuisines=fast%20food&sort=real_distance&order=desc"
-
-
-// $.ajax(url, {
-//     method : "GET",
-//     headers : headers,
-//     dataType : 'json'
-//     }).done(function(response) {
-//       console.log(response);
-
-//     });
-
