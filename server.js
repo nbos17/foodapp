@@ -8,10 +8,7 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 
 
-// Use morgan logger for logging requests
-app.use(logger("dev"));
-// Use body-parser for handling form submissions
-app.use(bodyParser.urlencoded({ extended: true }));
+
 
 var PORT = process.env.PORT || 3000;
 
@@ -21,7 +18,16 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/foodapp";
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
+// Use morgan logger for logging requests
+app.use(logger("dev"));
+// Use body-parser for handling form submissions
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(public));
+
+app.listen(PORT, function() {
+  console.log("App running on port " + PORT + "!");
+});
+
 
 // viewed at http://localhost:8080
 app.get('/', function(req, res) {
@@ -50,9 +56,6 @@ app.get("/food", function(req, res) {
 
 
 
-app.listen(PORT, function() {
-  console.log("App running on port " + PORT + "!");
-});
 
 
 

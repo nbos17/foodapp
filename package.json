@@ -2,7 +2,7 @@
   "name": "foodapp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -15,6 +15,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nbos17/foodapp/issues"
+  },
+  "engines" : {
+    "node" : "8.9.4"
   },
   "homepage": "https://github.com/nbos17/foodapp#readme",
   "dependencies": {
