@@ -69,6 +69,20 @@ $('#Submit').on('click', function() {
     console.log(response);
     $('#fourth').css('display', 'none');
     $('#five').css('display', 'block');
-    $('#yourChoice').html(response[0].name);
+    if (response.length > 0) {
+      $('#yourChoice').html(response[0].name);
+    }
+    else {
+      $('#yourChoice').html("Sorry. No Options Available");
+   }
   })
+});
+
+//RESET BUTTON
+$('#reset').on('click', function() {
+  $('#five').css('display', 'none');
+  $('#first').css('display', 'block');
+  food = '';
+  quality = '';
+  time = '';
 });
