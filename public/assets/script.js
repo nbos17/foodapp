@@ -82,12 +82,13 @@ $('#Submit').on('click', function() {
       }
     }
     else {
-      $('#yourChoice').html("Sorry. No Options Available");
+      $('#noOptions').css('display', 'block');
+      $('#eatOptions').html("Sorry. No Options Available");
    }
   })
 });
 
-//RESET BUTTON
+//RESET BUTTON AFTER SELECTION
 $('#reset').on('click', function() {
   $('#five').css('display', 'none');
   $('#six').css('display', 'none');
@@ -97,6 +98,7 @@ $('#reset').on('click', function() {
   time = '';
 });
 
+//MAKE YOUR SELECTION
 $(document).on('click', '#choices', function() {
   let choice = this.value;
   console.log(choice);
@@ -106,3 +108,13 @@ $(document).on('click', '#choices', function() {
 });
 
 
+//RESET BUTTON NO OPTIONS AVAILABLE
+$('#Reset').on('click', function() {
+  $('#five').css('display', 'none');
+  $('#six').css('display', 'none');
+  $('#first').css('display', 'block');
+  $('#noOptions').css('display', 'none');
+  food = '';
+  quality = '';
+  time = '';
+});
