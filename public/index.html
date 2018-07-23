@@ -66,15 +66,14 @@
 
 		<div class="card" id="third">
 			<div class="card-header">
-				<h2>How Fast Do You Want Your Food?</h2>
+				<h2>How Do You Want To Get Your Food?</h2>
 			</div>
 			<div class="card-body">
 				<div class="row">
 					<div class="col-md-4"></div>
 					<div class="col-md-4">
-						<button class="t2 btn btn-primary" value="fast">Very Fast</button>
-						<button class="t2 btn btn-primary" value="normal">Within normal lunch break</button>
-						<button class="t2 btn btn-primary" value="delivery">Delivery Please</button>
+						<button class="t2 btn btn-primary" value="normal">Go There</button>
+						<button class="t2 btn btn-primary" value="delivery">Delivery</button>
 						<button class="btn btn-primary" id="goBack2">Go Back</button>
 					</div>
 				</div>
@@ -101,13 +100,29 @@
 
 		<div class="card" id="five">
 			<div class="card-header">
-				<h2>Your Restaurant Choice</h2>
+				<h2>See Your Options</h2>
 			</div>
 			<div class="card-body">
 				<div class="row">
 					<div class="col-md-4"></div>
-					<div class="col-md-4"><span id="yourChoice"></span>
-					</div>
+					<div class="col-md-4" id="eatOptions"></div>
+				</div>
+				<br><br>
+<!-- 				<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4"><button class="btn btn-primary" id="reset">Start New Search</button></div>
+				</div> -->
+			</div>
+		</div>
+
+		<div class="card" id="six">
+			<div class="card-header">
+				<h2>Your Selection</h2>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4"><span id='yourChoice'></span></div>
 				</div>
 				<br><br>
 				<div class="row">
@@ -116,9 +131,6 @@
 				</div>
 			</div>
 		</div>
-
-
-    <div id="map"></div>
     
 	</div>
 

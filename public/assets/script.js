@@ -52,9 +52,10 @@ $('.t2').on('click', function() {
 });
 
 
-
+//Search Results, Database call
 $('#Submit').on('click', function() {
   console.log(food, quality, time);
+  $('#eatOptions').empty();
 
 
   $.ajax('/food', {
@@ -67,10 +68,18 @@ $('#Submit').on('click', function() {
     }
   }).done(function(response) {
     console.log(response);
+
     $('#fourth').css('display', 'none');
     $('#five').css('display', 'block');
     if (response.length > 0) {
-      $('#yourChoice').html(response[0].name);
+      for (var i = 0; i < response.length; i++) {
+        var newDiv = $('<button>');
+            newDiv.addClass('btn btn-primary');
+            newDiv.attr('id', 'choices');
+            newDiv.attr('value', response[i].name)
+            newDiv.html(response[i].name);
+        $('#eatOptions').append(newDiv);
+      }
     }
     else {
       $('#yourChoice').html("Sorry. No Options Available");
@@ -81,8 +90,19 @@ $('#Submit').on('click', function() {
 //RESET BUTTON
 $('#reset').on('click', function() {
   $('#five').css('display', 'none');
+  $('#six').css('display', 'none');
   $('#first').css('display', 'block');
   food = '';
   quality = '';
   time = '';
 });
+
+$(document).on('click', '#choices', function() {
+  let choice = this.value;
+  console.log(choice);
+  $('#five').css('display', 'none');
+  $('#six').css('display', 'block');
+  $('#yourChoice').html(this.value);
+});
+
+

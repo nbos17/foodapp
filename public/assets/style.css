@@ -29,6 +29,9 @@
 #five {
 	display : none;
 }
+#six {
+	display: none;
+}
 #goBack {
 	margin: 10px;
 	display: block;
@@ -80,6 +83,23 @@ span {
 }
 #map {
 	height: 500px;
+}
+#choices {
+	display: block;
+	margin: 10px;
+	width: 75%;
+}
+#reset {
+	width: 75%;
+	margin: 10px;
+	margin-right: 100px;
+	background-color: green;
+}
+#yourChoice {
+	margin: 10px;
+	margin-bottom: 50px;
+	text-decoration: underline;
+	font-size: 40px;
 }
 
 
