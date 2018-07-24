@@ -54,7 +54,7 @@ app.get("/food", function(req, res) {
     });
 });
 
-
+//random button route
 app.get("/random", function(req, res) {
 	db.Food.find({})
 		.then(function(food) {

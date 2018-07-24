@@ -126,6 +126,7 @@ $('#random').on('click', function() {
     method : "GET",
     dataType : "json"
   }).done(function(response) {
+    
     //choose restaurant
     var random = Math.floor((Math.random() * response.length));
     console.log(random);
