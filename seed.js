@@ -21,7 +21,7 @@ const restaurants = [
   {
   	name : "KFC",
   	quality : 3.4,
-    type : "fastFood",
+    type : "Fast",
   	time : "normal",
     price : 6
   },
@@ -97,7 +97,7 @@ const restaurants = [
   },
   {
     name : "Burger King",
-    tpye : "fastFood",
+    tpye : "Fast",
     quality : 3,
     time : "normal",
     price : 6
