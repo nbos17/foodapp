@@ -113,6 +113,13 @@ span {
 #noOptions {
 	display: none;
 }
+#random {
+	background-color: grey;
+	border-color: grey;
+	margin: 10px;
+	display: block;
+	width: 75%;
+}
 
 
 @media screen and (max-width: 370px) {
