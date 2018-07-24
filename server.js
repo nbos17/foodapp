@@ -55,6 +55,16 @@ app.get("/food", function(req, res) {
 });
 
 
+app.get("/random", function(req, res) {
+	db.Food.find({})
+		.then(function(food) {
+			console.log(food);
+			res.json(food);
+		})
+		.catch(function(err) {
+			res.json(err);
+		});
+});
 
 
 

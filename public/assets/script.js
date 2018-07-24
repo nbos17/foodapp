@@ -67,7 +67,7 @@ $('#Submit').on('click', function() {
       time : time
     }
   }).done(function(response) {
-    console.log(response);
+    //console.log(response);
 
     $('#fourth').css('display', 'none');
     $('#five').css('display', 'block');
@@ -117,4 +117,26 @@ $('#Reset').on('click', function() {
   food = '';
   quality = '';
   time = '';
+});
+
+//RANDOM OPTION!
+$('#random').on('click', function() {
+
+  $.ajax('/random', {
+    method : "GET",
+    dataType : "json"
+  }).done(function(response) {
+    //choose restaurant
+    var random = Math.floor((Math.random() * response.length));
+    console.log(random);
+    var eatHere = response[random].name;
+    console.log(eatHere);
+
+    //display correct card
+    $('#first').css('display', 'none');
+    $('#six').css('display', 'block');
+    $('#yourChoice').html(eatHere);
+
+
+  })
 });
