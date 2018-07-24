@@ -124,10 +124,13 @@ span {
 
 @media screen and (max-width: 370px) {
 	.food {
-		margin: 30px;
+		margin: 20px;
 	}
 	.idk {
 		margin: 30px;
+	}
+	#random {
+		margin : 20px;
 	}
 	#goBack {
 		margin: 60px 30px 30px 30px;
