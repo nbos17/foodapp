@@ -1,9 +1,24 @@
-
-
-//Button Options-------------------------------
+//Declare Variables
 var food;
 var quality;
 var time;
+
+//Opening Screen Selections
+$('#foodType').on('click', function() {
+  $('#zero').css('display', 'none');
+  $('#first').css('display', 'block');
+});
+
+$('#byCost').on('click', function() {
+  $('#zero').css('display', 'none');
+  $('#second').css('display', 'block');
+});
+
+$('#byMethod').on('click', function() {
+  $('#zero').css('display', 'none');
+  $('#second').css('display', 'block');
+});
+
 
 //Choose Food Option
 $('.food').on('click', function() {
@@ -126,7 +141,7 @@ $('#random').on('click', function() {
     method : "GET",
     dataType : "json"
   }).done(function(response) {
-    
+
     //choose restaurant
     var random = Math.floor((Math.random() * response.length));
     console.log(random);
