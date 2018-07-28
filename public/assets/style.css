@@ -66,7 +66,12 @@ h1 {
 	display: block;
 	width: 75%;
 }
-
+#goBack0 {
+	margin: 10px;
+	display: block;
+	width: 75%;
+	background-color: red;
+}
 #goBack2 {
 	margin: 10px;
 	display: block;
@@ -94,8 +99,14 @@ h1 {
 	width: 75%;
 }
 .start:hover {
-	height: 55px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 100px;
 	background-color: lightblue;
+	font-size: 30px;
+	width: auto;
+	font-weight: bold;
+
 }
 .q2 {
 	margin: 10px;
@@ -135,13 +146,19 @@ span {
 	display: none;
 }
 #random {
-	background-color: grey;
+	background-color: green;
 	border-color: grey;
 	margin: 10px;
+	margin-top: 80px;
 	display: block;
 	width: 75%;
 }
-
+#random:hover {
+	font-size: 30px;
+	font-weight: bolder;
+	width: auto;
+	background: lightgreen;
+}
 
 @media screen and (max-width: 370px) {
 	.start {

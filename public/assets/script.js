@@ -36,7 +36,11 @@ $('.q2').on('click', function() {
 	$('#third').css('display', 'block');
 });
 
-
+//home page back button
+$('#goBack0').on('click', function() {
+  $('#first').css('display', 'none');
+  $('#zero').css('display', 'block');
+})
 //Go Back To First Card
 $('#goBack').on('click', function() {
 	$('#second').css('display', 'none');
@@ -149,7 +153,7 @@ $('#random').on('click', function() {
     console.log(eatHere);
 
     //display correct card
-    $('#first').css('display', 'none');
+    $('#zero').css('display', 'none');
     $('#six').css('display', 'block');
     $('#yourChoice').html(eatHere);
 
