@@ -111,7 +111,7 @@ $('#Submit').on('click', function() {
 $('#reset').on('click', function() {
   $('#five').css('display', 'none');
   $('#six').css('display', 'none');
-  $('#first').css('display', 'block');
+  $('#zero').css('display', 'block');
   food = '';
   quality = '';
   time = '';
