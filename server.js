@@ -37,7 +37,7 @@ app.get('/', function(req, res) {
 app.get("/food", function(req, res) {
 	var query = {type : req.query.food};
 	var number = parseInt(req.query.quality);
-	var quality = {price : number};
+	var quality = {price : {$lte : number}};
 	var time = {time : req.query.time};
 
 	console.log(query, quality, time);
