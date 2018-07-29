@@ -9,15 +9,15 @@ $('#foodType').on('click', function() {
   $('#first').css('display', 'block');
 });
 
-$('#byCost').on('click', function() {
-  $('#zero').css('display', 'none');
-  $('#second').css('display', 'block');
-});
+// $('#byCost').on('click', function() {
+//   $('#zero').css('display', 'none');
+//   $('#second').css('display', 'block');
+// });
 
-$('#byMethod').on('click', function() {
-  $('#zero').css('display', 'none');
-  $('#second').css('display', 'block');
-});
+// $('#byMethod').on('click', function() {
+//   $('#zero').css('display', 'none');
+//   $('#second').css('display', 'block');
+// });
 
 
 //Choose Food Option

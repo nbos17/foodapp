@@ -34,6 +34,17 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(public, 'index.html'));
 });
 
+// view cost sort option
+app.get('/cost', function(req, res) {
+	res.sendFile(path.join(public, 'cost.html'));
+});
+
+// view method cost option
+app.get('/method', function(req, res) {
+	res.sendFile(path.join(public, 'method.html'));
+});
+
+//food main search
 app.get("/food", function(req, res) {
 	var query = {type : req.query.food};
 	var number = parseInt(req.query.quality);
@@ -66,7 +77,41 @@ app.get("/random", function(req, res) {
 		});
 });
 
+// cost db call
+app.get("/foodCost", function(req, res) {
+	console.log(req.query.quality);
+	//var query = {type : req.query.food};
+	var number = parseInt(req.query.quality);
+	var quality = {price : {$lte : number}};
+	//var time = {time : req.query.time};
 
+  // Grab every document in the Articles collection
+  db.Food.find({price : {$lte :number}} )
+    .then(function(food) {
+    	console.log(food);
+      // If we were able to successfully find Articles, send them back to the client
+      res.json(food);
+    })
+    .catch(function(err) {
+      // If an error occurred, send it to the client
+      res.json(err);
+    });
+});
+
+//method db call
+app.get("/foodMethod", function(req, res) {
+	console.log(req.query.time);
+	var time = req.query.time;
+
+	db.Food.find({time : time})
+		.then(function(food) {
+			console.log(food);
+			res.json(food)
+		})
+		.catch(function(err) {
+			res.json(err);
+		})
+});
 
 
 

@@ -14,7 +14,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCZSnTZ6SCg14rS-zvlQPhJ9oi-gY4jec&libraries=places"></script>
 
-	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/cost.css">
 </head>
 <body>
 
@@ -37,29 +37,12 @@
 						<button class="q2 btn btn-primary" value="6">$6 or under</button>
 						<button class="q2 btn btn-primary" value="10">$7 - $10</button>
 						<button class="q2 btn btn-primary" value="11">$11 or more</button>
-						<button class="btn btn-primary" id="goBack">Go Back</button>
+						<a href="/"<button class="btn btn-primary" id="goBack">Go Back</button></a>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="card" id="fourth">
-			<div class="card-header">
-				<h2>Choice Summary</h2>
-			</div>
-			<div class="card-body">
-				<div class="row">
-					<div class="col-md-4"></div>
-					<div class="col-md-4">
-						<p>Food Category: <span id="foodChoice"></span></p>
-						<p>Cost : <span id="foodQuality"></span></p>
-						<p>Time : <span id="foodTime"></span></p>
-						<button class="btn btn-primary" id="Submit">See Your Options</button>
-						<button class="btn btn-primary" id="goBack3">Go Back</button>
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<div class="card" id="five">
 			<div class="card-header">
@@ -90,11 +73,14 @@
 				<br><br>
 				<div class="row">
 					<div class="col-md-4"></div>
-					<div class="col-md-4"><button class="btn btn-primary" id="reset">Start New Search</button></div>
+					<div class="col-md-4">
+						<a href="/"<button class="btn btn-primary" id="reset">Start New Search</button></a>
+					</div>
 				</div>
 			</div>
 		</div>
 
 
 	</div>
+	<script src="assets/cost.js"></script>
 </body>
