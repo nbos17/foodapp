@@ -58,7 +58,8 @@ const restaurants = [
     type : "Mexican",
     quality : 3.5,
     time : "normal",
-    price : 6 
+    price : 6,
+    menu : "https://www.tacojohns.com/#featured-items"
   },
   {
     name : "Zantigo's",
@@ -79,7 +80,8 @@ const restaurants = [
     type : "Mexican",
     quality : 3.5,
     time : "normal",
-    price : 6
+    price : 6,
+    menu : "https://www.tacobell.com/food"
   },
   {
     name : "Qdoba",

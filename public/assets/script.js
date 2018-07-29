@@ -95,13 +95,14 @@ $('#Submit').on('click', function() {
         var newDiv = $('<button>');
             newDiv.addClass('btn btn-primary');
             newDiv.attr('id', 'choices');
-            newDiv.attr('value', response[i].name)
+            newDiv.attr('value', response[i].name);
+            newDiv.attr('data-menu', response[i].menu);
             newDiv.html(response[i].name);
         $('#eatOptions').append(newDiv);
       }
     }
     else {
-      $('#noOptions').css('display', 'block');
+      $('#noOptions').css('display', 'inline');
       $('#eatOptions').html("Sorry. No Options Available");
    }
   })
@@ -119,11 +120,14 @@ $('#reset').on('click', function() {
 
 //MAKE YOUR SELECTION
 $(document).on('click', '#choices', function() {
-  let choice = this.value;
+  var choice = this.value;
+  var menu = $(this).data('menu');
+  console.log(menu);
   console.log(choice);
   $('#five').css('display', 'none');
   $('#six').css('display', 'block');
   $('#yourChoice').html(this.value);
+  $('#menu').attr('href', menu);
 });
 
 
@@ -131,7 +135,6 @@ $(document).on('click', '#choices', function() {
 $('#Reset').on('click', function() {
   $('#five').css('display', 'none');
   $('#six').css('display', 'none');
-  $('#first').css('display', 'block');
   $('#noOptions').css('display', 'none');
   food = '';
   quality = '';
@@ -150,12 +153,14 @@ $('#random').on('click', function() {
     var random = Math.floor((Math.random() * response.length));
     console.log(random);
     var eatHere = response[random].name;
+    var menu = response[random].menu;
     console.log(eatHere);
 
     //display correct card
     $('#zero').css('display', 'none');
     $('#six').css('display', 'block');
     $('#yourChoice').html(eatHere);
+    $('#menu').attr('href', menu);
 
 
   })

@@ -5,6 +5,8 @@ body {
 }
 h2 {
 	color: white;
+	margin-right: 40px;
+	margin-left: 40px;
 }
 h1 {
 	font-weight: bolder;
@@ -126,10 +128,14 @@ span {
 	margin: 30px;
 	width: 75%;
 }
+#Reset {
+	width: 75%;
+	margin-left: 390px;
+	background-color: green;
+}
 #reset {
 	width: 75%;
 	margin: 30px;
-	margin-right: 100px;
 	background-color: green;
 }
 #yourChoice {
@@ -156,14 +162,24 @@ span {
 	background: lightgreen;
 }
 
+
+
 @media screen and (max-width: 370px) {
+	#goBack0 {
+		margin-left: 40px;
+	}
 	.start {
 		margin: 20px;
 		margin-left: 40px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		
 	}
 	.food {
 		margin: 20px;
 		margin-left: 40px;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	.idk {
 		margin: 30px;
@@ -189,5 +205,11 @@ span {
 	}
 	.t2 {
 		margin: 30px;
+	}
+	h2 {
+		margin: 0;
+	}
+	#Reset {
+		margin: 0;
 	}
 }
