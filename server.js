@@ -82,7 +82,7 @@ app.get("/foodCost", function(req, res) {
 	console.log(req.query.quality);
 	//var query = {type : req.query.food};
 	var number = parseInt(req.query.quality);
-	var quality = {price : {$lte : number}};
+	var quality = {price : number};
 	//var time = {time : req.query.time};
 
   // Grab every document in the Articles collection
