@@ -86,7 +86,7 @@ app.get("/foodCost", function(req, res) {
 	//var time = {time : req.query.time};
 
   // Grab every document in the Articles collection
-  db.Food.find({price : {$lte :number}} )
+  db.Food.find({price : number} )
     .then(function(food) {
     	console.log(food);
       // If we were able to successfully find Articles, send them back to the client
