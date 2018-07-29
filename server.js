@@ -6,7 +6,7 @@ var mongoose = require("mongoose");
 var db = require("./models");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
-
+var favicon = require('serve-favicon');
 
 
 
@@ -28,6 +28,7 @@ app.listen(PORT, function() {
   console.log("App running on port " + PORT + "!");
 });
 
+app.use(favicon(path.join(__dirname, 'public', 'fimage.png'))); 
 
 // viewed at http://localhost:8080
 app.get('/', function(req, res) {
