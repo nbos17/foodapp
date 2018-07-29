@@ -19,7 +19,8 @@ $('.t2').on('click', function() {
               var newDiv = $('<button>');
                   newDiv.addClass('btn btn-primary');
                   newDiv.attr('id', 'choices');
-                  newDiv.attr('value', response[i].name)
+                  newDiv.attr('value', response[i].name);
+                  newDiv.attr('data-menu', response[i].menu);
                   newDiv.html(response[i].name);
               $('#eatOptions').append(newDiv);
             }
@@ -34,10 +35,12 @@ $('.t2').on('click', function() {
 //MAKE YOUR SELECTION
 $(document).on('click', '#choices', function() {
     let choice = this.value;
+    var menu = $(this).data('menu');
     console.log(choice);
     $('#five').css('display', 'none');
     $('#six').css('display', 'block');
     $('#yourChoice').html(this.value);
+    $('#menu').attr('href', menu);
 });
 
 //RESET BUTTON AFTER SELECTION
