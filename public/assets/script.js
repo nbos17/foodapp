@@ -150,7 +150,7 @@ $('#random').on('click', function() {
   }).done(function(response) {
     var eatHere;
     var menu;
-    console.log(response);
+    //console.log(response);
 
     //choose restaurant
 
