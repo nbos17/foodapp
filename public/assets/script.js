@@ -148,40 +148,50 @@ $('#random').on('click', function() {
     method : "GET",
     dataType : "json"
   }).done(function(response) {
+    var eatHere;
+    var menu;
     console.log(response);
 
     //choose restaurant
 
-    //   var today = new Date();
-    //   var dd = today.getDate();
-    //   var mm = today.getMonth()+1; //January is 0!
-    //   var yyyy = today.getFullYear();
+      var today = new Date();
+      var dd = today.getDate();
+      var mm = today.getMonth()+1; //January is 0!
+      var yyyy = today.getFullYear();
 
-    //   if(dd<10) {
-    //       dd = '0'+dd
-    //   } 
+      if(dd<10) {
+          dd = '0'+dd
+      } 
 
-    //   if(mm<10) {
-    //       mm = '0'+mm
-    //   } 
+      if(mm<10) {
+          mm = '0'+mm
+      } 
 
-    //   today = mm + '/' + dd + '/' + yyyy;
-    //   console.log(today);
+      today = mm + '/' + dd + '/' + yyyy;
+      console.log(today);
 
-    // if (today == '07/31/2018') {
-    //   var eatHere = 
-    // }
-    var random = Math.floor((Math.random() * response.length));
-    console.log(random);
-    var eatHere = response[random].name;
-    var menu = response[random].menu;
-    console.log(eatHere);
-
-    //display correct card
-    $('#zero').css('display', 'none');
-    $('#six').css('display', 'block');
-    $('#yourChoice').html(eatHere);
-    $('#menu').attr('href', menu);
+    if (today == '07/31/2018') {
+      eatHere = response[5].name;
+      menu = 'BUCKETS!!!';
+       //display correct card
+      $('#zero').css('display', 'none');
+      $('#six').css('display', 'block');
+      $('#yourChoice').html(eatHere);
+      $('#menu').html(menu);
+    }
+    else {
+      var random = Math.floor((Math.random() * response.length));
+      console.log(random);
+      eatHere = response[random].name;
+      menu = response[random].menu;
+      console.log(eatHere);
+      //display correct card
+      $('#zero').css('display', 'none');
+      $('#six').css('display', 'block');
+      $('#yourChoice').html(eatHere);
+      $('#menu').attr('href', menu);
+    }
+   
 
 
   })

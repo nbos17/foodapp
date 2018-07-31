@@ -187,7 +187,9 @@ span {
 	width: auto;
 	background: lightgreen;
 }
-
+#menu {
+	font-size: 2rem;
+}
 
 
 @media screen and (max-width: 370px) {
