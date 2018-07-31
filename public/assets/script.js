@@ -148,8 +148,29 @@ $('#random').on('click', function() {
     method : "GET",
     dataType : "json"
   }).done(function(response) {
+    console.log(response);
 
     //choose restaurant
+
+    //   var today = new Date();
+    //   var dd = today.getDate();
+    //   var mm = today.getMonth()+1; //January is 0!
+    //   var yyyy = today.getFullYear();
+
+    //   if(dd<10) {
+    //       dd = '0'+dd
+    //   } 
+
+    //   if(mm<10) {
+    //       mm = '0'+mm
+    //   } 
+
+    //   today = mm + '/' + dd + '/' + yyyy;
+    //   console.log(today);
+
+    // if (today == '07/31/2018') {
+    //   var eatHere = 
+    // }
     var random = Math.floor((Math.random() * response.length));
     console.log(random);
     var eatHere = response[random].name;
