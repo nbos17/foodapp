@@ -28,7 +28,7 @@ app.listen(PORT, function() {
   console.log("App running on port " + PORT + "!");
 });
 
-app.use(favicon(path.join(__dirname, 'public', 'fimage.png'))); 
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico'))); 
 
 // viewed at http://localhost:8080
 app.get('/', function(req, res) {
