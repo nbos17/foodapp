@@ -7,6 +7,7 @@ var db = require("./models");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var favicon = require('serve-favicon');
+var axios = require('axios');
 
 
 
@@ -114,6 +115,17 @@ app.get("/foodMethod", function(req, res) {
 		})
 });
 
+function apiCall() {
+	axios.get('https://api.fda.gov/drug/label.json')
+		.then(function (response) {
+			console.log(response.data.results);
+		})
+		.catch(function(error) {
+			console.log(error)
+		});
+}
+
+apiCall();
 
 
 
